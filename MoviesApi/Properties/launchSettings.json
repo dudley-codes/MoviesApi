@@ -18,7 +18,7 @@
       }
     },
     "MoviesApi": {
-      "commandName": "Project",
+      "commandName": "IISExpress",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
       "launchUrl": "swagger",
