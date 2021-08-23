@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MoviesApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MoviesApi
 {
@@ -28,6 +30,7 @@ namespace MoviesApi
         {
 
             services.AddControllers();
+            services.AddDbContext<MoviesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MoviesDbConnectionString")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MoviesApi", Version = "v1" });
